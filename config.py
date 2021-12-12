@@ -1,21 +1,26 @@
 #Variables categoricas con NA
-CATEGORICAL_VARS_WITH_NA_MISSING = ['SibSp', 'Parch','Pclass']
+CATEGORICAL_VARS_WITH_NA_FREQUENT = []
+
+#Variable categoricas con NA pero indicador de Missing
+CATEGORICAL_VARS_WITH_NA_MISSING = []
+
 
 #Variables numéricas con NA
 NUMERICAL_VARS_WITH_NA = ['Age']
 
 
-#Varibles para transformación logaritmia
-NUMERICALS_LOG_VARS = ['Fare']
-
-#Variables para hacer mapeo categorico por codificación ordinal
-SEX_VARS = ['Sex']
+#Variables para binarización por sesgo fuerte
+BINARIZE_VARS = ['Fare']
 
 #Variables categoricas a codificar sin ordinalidad
-#CATEGORICAL_VARS = ['Cabin', 'Embarked', 'SibSp', 'Parch', 'Pclass']
-
-#Mapeos de variables categoricas
-SEX_MAPPINGS = {'male':1, 'female':0}
+CATEGORICAL_VARS = ['Sex']
 
 #Variables seleccionadas según análisis de Lasso
-FEATURES = ['Sex', 'Age', 'Fare','SibSp', 'Parch','Pclass']
+FEATURES = [
+    'Pclass',
+    'Sex',  
+    'Age', 
+    'SibSp', 
+    'Parch', 
+    'Fare',
+]
